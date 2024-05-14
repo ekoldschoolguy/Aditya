@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f1f1f;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .quote {
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>दस्तक</h1>
+        <div class="quote" id="bukowski-quote"></div>
+        <button onclick="getBukowskiQuote()">Generate Bukowski Quote</button>
+
+        <div class="quote" id="faiz-quote"></div>
+        <button onclick="getFaizQuote()">Generate Faiz Quote</button>
+    </div>
+
+    <script>
+        const bukowskiQuotes = [
+            "Find what you love and let it kill you.",
+            "Some people never go crazy. What truly horrible lives they must lead.",
+            "We're all going to die, all of us, what a circus!",
+            "Genius might be the ability to say a profound thing in a simple way.",
+            "The problem with the world is that the intelligent people are full of doubts, while the stupid ones are full of confidence.",
+            "The free soul is rare, but you know it when you see it - basically because you feel good, very good, when you are near or with them.",
+            "The best way to find out if you can trust somebody is to trust them.",
+            "We're all going to die, all of us, what a circus!",
+            "What matters most is how well you walk through the fire.",
+            "The less I needed, the better I felt."
+        ];
+
+        const faizQuotes = [
+            "I have been trying to write this poem for 10 years. I have been quiet, but my heart is restless.",
+            "We have to move forward. The fire in our hearts is still burning.",
+            "We are not on the throne of the ruler, nor are we on the slave's bed. We are free, free from head to toe.",
+            "We are the ones who have to work for the salvation of the world.",
+            "This evening, too, will pass, and you will not be able to walk this path again.",
+            "Come, let's go, even though the night is dark, the sun is shining somewhere.",
+            "When you are there, life is beautiful; when you are not there, life is a barren desert.",
+            "The sky is as clear as it can be; there is no limit to the horizon, no limit to the sky.",
+            "The laughter of the flowers is the music of the world.",
+            "If you don't agree, then what can I do? The path of love is full of thorns."
+        ];
+
+        function getBukowskiQuote() {
+            const randomIndex = Math.floor(Math.random() * bukowskiQuotes.length);
+            document.getElementById("bukowski-quote").textContent = bukowskiQuotes[randomIndex];
+        }
+
+        function getFaizQuote() {
+            const randomIndex = Math.floor(Math.random() * faizQuotes.length);
+            document.getElementById("faiz-quote").textContent = faizQuotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
